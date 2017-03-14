@@ -19,14 +19,14 @@ build:
     - lib/R/lib/
     - lib/
 
-requirements:
-  build:
-    - r-base
-    - posix
-    - m2w64-toolchain
-    - gcc
-  run:
-    - r-base
+requirements:  # [not win32]
+  build:  # [not win32]
+    - r-base  # [not win32]
+    - posix  # [win64]
+    - m2w64-toolchain  # [win64]
+    - gcc  # [not win]
+  run:  # [not win32]
+    - r-base  # [not win32]
 
 test:
   commands:
