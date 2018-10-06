@@ -12,7 +12,7 @@ source:
   url:
     - http://cran.r-project.org/src/contrib/gsw_{{ version }}.tar.gz
     - http://cran.r-project.org/src/contrib/Archive/gsw/gsw_{{ version }}.tar.gz
-  sha256: e24c6802467546d616531499c2a98610fdb5c35c8a1e161b6d6b887c4c814331
+  sha256: eb468918ee91e429b47fbcac43269eca627b7f64b61520de5bbe8fa223e96453
 
 build:
   number: 0
