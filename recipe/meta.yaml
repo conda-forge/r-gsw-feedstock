@@ -15,7 +15,7 @@ source:
   sha256: eb468918ee91e429b47fbcac43269eca627b7f64b61520de5bbe8fa223e96453
 
 build:
-  number: 1001
+  number: 1002
   merge_build_host: True  # [win]
   script: R CMD INSTALL --build .
   rpaths:
@@ -26,17 +26,17 @@ requirements:
   build:
     - {{ compiler('c') }}        # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
-    - {{posix}}filesystem        # [win]
-    - {{posix}}make
-    - {{posix}}sed               # [win]
-    - {{posix}}coreutils         # [win]
-    - {{posix}}zip               # [win]
+    - {{ posix }}filesystem        # [win]
+    - {{ posix }}make
+    - {{ posix }}sed               # [win]
+    - {{ posix }}coreutils         # [win]
+    - {{ posix }}zip               # [win]
   host:
     - r-base
     - r-testthat
   run:
     - r-base
-    - {{native}}gcc-libs         # [win]
+    - {{ native }}gcc-libs         # [win]
     - r-testthat
 
 test:
