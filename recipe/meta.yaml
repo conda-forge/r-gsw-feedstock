@@ -1,4 +1,4 @@
-{% set version = "1.0-5" %}
+{% set version = "1.0-6" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,11 +12,11 @@ source:
   url:
     - http://cran.r-project.org/src/contrib/gsw_{{ version }}.tar.gz
     - http://cran.r-project.org/src/contrib/Archive/gsw/gsw_{{ version }}.tar.gz
-  sha256: eb468918ee91e429b47fbcac43269eca627b7f64b61520de5bbe8fa223e96453
+  sha256: 147ce73da75777799af9cb712862ef25b52fcae146a64ce0a525460ddfea1deb
 
 build:
-  number: 1002
-  merge_build_host: True  # [win]
+  number: 0
+  merge_build_host: true  # [win]
   script: R CMD INSTALL --build .
   rpaths:
     - lib/R/lib/
@@ -48,10 +48,7 @@ about:
   home: http://teos-10.github.io/GSW-R/index.html
   license: GPL-3.0
   license_file: LICENSE
-  summary: 'Provides an interface to the Gibbs SeaWater (TEOS-10) C library, which
-    derives from Matlab and other code written by WG127 (Working Group 127) of
-    SCOR/IAPSO (Scientific Committee on Oceanic Research / International Association
-    for the Physical Sciences of the Oceans).'
+  summary: Provides an interface to the Gibbs SeaWater (TEOS-10) C library, which derives from Matlab and other code written by WG127 (Working Group 127) of SCOR/IAPSO (Scientific Committee on Oceanic Research / International Association for the Physical Sciences of the Oceans).
 
 extra:
   recipe-maintainers:
