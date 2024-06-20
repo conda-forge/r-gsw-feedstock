@@ -17,8 +17,6 @@ source:
 build:
   number: 2
   merge_build_host: true  # [win]
-  script: R CMD INSTALL --build .                 # [build_platform == target_platform]
-  script: R CMD INSTALL --build --no-test-load .  # [build_platform != target_platform]
   rpaths:
     - lib/R/lib/
     - lib/
